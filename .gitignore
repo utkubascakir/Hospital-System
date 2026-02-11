@@ -1,0 +1,34 @@
+# Maven - Derlenmiş dosyalar ve raporlar
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+
+# IDE - IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# IDE - VS Code
+.vscode/
+.bin/
+.settings/
+.classpath
+.project
+.factorypath
+
+# Geçici dosyalar ve Loglar
+*.log
+*.ser
+*.tmp
+
+# OS bazlı dosyalar
+.DS_Store
+Thumbs.db
