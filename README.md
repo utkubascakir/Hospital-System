@@ -49,18 +49,50 @@ The CLI serves as the administrative backbone of the system, allowing for comple
 
 ### Prerequisites
 * Java Development Kit (JDK) 21 or higher
-* Maven
+* Maven (optional - see alternative methods below)
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/utkubascakir/Hospital-Management-System.git
-cd Hospital-Management-System
+git clone https://github.com/utkubascakir/Hospital-System.git
+cd Hospital-System
 ```
 
-### 2. Build the Project
+### 2. Installation Options
+
+#### Option A: Using Maven (Recommended)
+
+**If you don't have Maven installed:**
+
+**Windows:**
+1. Download Maven from [https://maven.apache.org/download.cgi](https://maven.apache.org/download.cgi)
+2. Extract to `C:\Program Files\Apache\maven`
+3. Add `C:\Program Files\Apache\maven\bin` to System PATH
+4. Verify: `mvn --version`
+
+**macOS/Linux:**
+```bash
+# macOS (using Homebrew)
+brew install maven
+
+# Linux (Ubuntu/Debian)
+sudo apt-get install maven
+
+# Verify installation
+mvn --version
+```
+
+**Build the project:**
 ```bash
 mvn clean install
 ```
+
+#### Option B: Using IDE (IntelliJ IDEA / Eclipse)
+
+1. Open the project folder in your IDE
+2. The IDE will automatically detect the `pom.xml` and download dependencies
+3. Right-click on the Main class and select "Run"
+
+**Note:** Using an IDE is the easiest method if you don't want to install Maven separately.
 
 ### 3. Run the Application
 You can run the application directly from the Main class. The system typically asks to choose between GUI or CLI mode upon startup.
@@ -93,8 +125,11 @@ mvn test
 ```
 
 This will execute tests for:
-* **HospitalStructureTest:** Validates the hierarchy and data entry logic.
-* **RendezvousServiceTest:** Verifies the appointment booking algorithms and constraints.
+* **Core System Components:** CRS, Doctor, Patient, Hospital, Section
+* **Business Logic:** Appointment scheduling, data validation, conflict detection
+* **Data Management:** Person registry, schedule management
+
+All test files can be found in the `src/test/java/` directory.
 
 ---
 
