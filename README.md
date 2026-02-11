@@ -5,7 +5,7 @@
 [![JUnit](https://img.shields.io/badge/JUnit-Testing-green.svg)](https://junit.org/)
 [![License](https://img.shields.io/badge/License-MIT-lightgrey.svg)]()
 
-A comprehensive **Hospital Management & Appointment Booking System** developed in Java. This project demonstrates advanced Object-Oriented Programming (OOP) principles, offering both a robust **Graphical User Interface (GUI)** using Swing and a lightweight **Command Line Interface (CLI)** for system administration.
+A hospital appointment booking system developed in Java as a university project. The system provides a Swing-based GUI for patients to book appointments and a CLI for administrators to manage the hospital structure.
 
 ---
 
@@ -53,7 +53,7 @@ The CLI serves as the administrative backbone of the system, allowing for comple
 
 ### 1. Clone the Repository
 ```bash
-git clone [https://github.com/utkubascakir/Hospital-Management-System.git](https://github.com/utkubascakir/Hospital-Management-System.git)
+git clone https://github.com/utkubascakir/Hospital-Management-System.git
 cd Hospital-Management-System
 ```
 
@@ -65,40 +65,52 @@ mvn clean install
 ### 3. Run the Application
 You can run the application directly from the Main class. The system typically asks to choose between GUI or CLI mode upon startup.
 
+---
+
 ## 🔐 Credentials for Testing
+
 To explore the full capabilities of the system, you can use the following pre-defined credentials or create your own:
 
-## 👤 Patient (Standard User)
-Action: Click "Create Account" on the login screen.
+### 👤 Patient (Standard User)
+* **Action:** Click "Create Account" on the login screen.
+* **ID:** Any unique numeric ID (e.g., 12345)
+* **Password:** Any secure password.
 
-ID: Any unique numeric ID (e.g., 12345)
+### 🛡️ Admin (System Manager - CLI Mode)
+* **Username (ID):** 999
+* **Password:** admin123
 
-Password: Any secure password.
+**Note:** Use these credentials to add new hospitals and doctors to the system.
 
-🛡️ Admin (System Manager - CLI Mode)
-Username (ID): 999
+---
 
-Password: admin123
+## 🧪 Testing
 
-Note: Use these credentials to add new hospitals and doctors to the system.
-
-🧪 Testing
 The project includes comprehensive unit tests to ensure system integrity. Run the tests using Maven:
 
-Bash
+```bash
 mvn test
+```
+
 This will execute tests for:
+* **HospitalStructureTest:** Validates the hierarchy and data entry logic.
+* **RendezvousServiceTest:** Verifies the appointment booking algorithms and constraints.
 
-HospitalStructureTest: Validates the hierarchy and data entry logic.
+---
 
-RendezvousServiceTest: Verifies the appointment booking algorithms and constraints.
+## 📂 Project Structure
 
-📂 Project Structure
-Plaintext
+```
 src/
 ├── main/java/
 │   ├── classes/       # Core Logic (CRS, Doctor, Hospital, etc.)
 │   ├── exceptions/    # Custom Exception Classes
 │   └── gui/           # UI Implementations (GUI.java, CLI.java)
 └── test/java/         # JUnit Test Suites
-Note: This project was developed as a final assignment for the Object-Oriented Programming course to demonstrate proficiency in Java application development and software architecture.
+```
+
+---
+
+## 📝 Note
+
+This project was developed as a final assignment for the Object-Oriented Programming course to demonstrate proficiency in Java application development and software architecture.
